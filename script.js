@@ -6,6 +6,9 @@ const todoList = document.getElementById('todoList');
 // Load todos from localStorage
 let todos = JSON.parse(localStorage.getItem('todos')) || [];
 
+// Track if event listeners have been initialized
+let eventListenersInitialized = false;
+
 // Initialize the app
 function init() {
     renderTodos();
@@ -14,12 +17,19 @@ function init() {
 
 // Add event listeners
 function addEventListeners() {
+    // Prevent duplicate event listener registration
+    if (eventListenersInitialized) {
+        return;
+    }
+    
     addBtn.addEventListener('click', addTodo);
     todoInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             addTodo();
         }
     });
+    
+    eventListenersInitialized = true;
 }
 
 // Add a new todo
@@ -66,7 +76,10 @@ function saveTodos() {
 
 // Render todos to the DOM
 function renderTodos() {
-    todoList.innerHTML = '';
+    // Remove existing event listeners by clearing and recreating
+    while (todoList.firstChild) {
+        todoList.removeChild(todoList.firstChild);
+    }
     
     if (todos.length === 0) {
         todoList.innerHTML = '<li class="empty-state">No tasks yet. Add one above!</li>';
