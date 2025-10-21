@@ -1,6 +1,7 @@
-# Simple TODO Web App
+# A simple TODO Web App
 
 A basic, clean TODO application to help you track and manage your daily tasks.
+This is created just for testing out my shell-script
 
 ## Features
 
