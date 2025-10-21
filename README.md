@@ -6,8 +6,8 @@ A basic, clean TODO application to help you track and manage your daily tasks.
 
 - ✅ Add new tasks
 - ✅ Mark tasks as complete/incomplete with checkboxes
-- ✅ Delete tasks
-- ✅ Tasks persist in browser's localStorage
+- ✅ Delete tasks that have been accomplished
+- ✅ Tasks persist in browser's localStorage, so you do not have to worry about creating an account for this. Use it on your basis
 - ✅ Clean, modern UI with responsive design
 
 ## How to Use
