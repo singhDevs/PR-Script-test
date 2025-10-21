@@ -35,5 +35,5 @@ python3 -m http.server 8080
 Then visit `http://localhost:8080` in your browser.
 
 ## Current contributors
-- @singhDevs
-- @singh-on-git
+- [@singhDevs](https://github.com/singhDevs)
+- [@singh-on-git](https://github.com/singh-on-git)
